@@ -32,3 +32,11 @@ describe("email is there", () => {
         getByTestId(/email/i);
     })
 })
+
+describe("message is showing", () => {
+    it("message has been entered", () => {
+        const {queryByText} = render(<ContactForm />);
+
+        queryByText('message');
+    })
+})
